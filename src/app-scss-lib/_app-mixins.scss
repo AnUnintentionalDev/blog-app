@@ -1,0 +1,41 @@
+@mixin generate-margin-padding($val) {
+  .m-#{$val} {
+    margin: $val+px !important;
+  }
+
+  .mt-#{$val} {
+    margin-top: $val+px !important;
+  }
+
+  .mb-#{$val} {
+    margin-bottom: $val+px !important;
+  }
+
+  .ml-#{$val} {
+    margin-left: $val+px !important;
+  }
+
+  .mr-#{$val} {
+    margin-right: $val+px !important;
+  }
+
+  .p-#{$val} {
+    padding: $val+px !important;
+  }
+
+  .pt-#{$val} {
+    padding-top: $val+'px' !important;
+  }
+
+  .pb-#{$val} {
+    padding-bottom: $val+'px' !important;
+  }
+
+  .pl-#{$val} {
+    padding-left: $val+'px' !important;
+  }
+
+  .pr-#{$val} {
+    padding-right: $val+'px' !important;
+  }
+}
