@@ -1,0 +1,28 @@
+.app-logo-wrapper {
+  width: calc(100% - 100px);
+}
+
+.app-icon {
+  max-width: 36px;
+}
+
+.app-text {
+  margin-left: 10px;
+}
+
+.app-home-logo-link {
+  width: 100%;
+  text-decoration: none;
+  color: white;
+}
+
+.mat-drawer-inner-container {
+  &--main-menu {
+    min-width: 260px;
+
+    .sidenav-menu {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

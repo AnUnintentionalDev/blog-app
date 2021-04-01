@@ -11,6 +11,8 @@ import { AppBlogViewComponent } from './app-blog-view/app-blog-view.component';
 import { AppBlogEditComponent } from './app-blog-edit/app-blog-edit.component';
 import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
 import { AppMaterialModule } from './app-material.module';
+import { AppConnectWithUsComponent } from './app-connect-with-us/app-connect-with-us.component';
+import { AppContactUsComponent } from './app-contact-us/app-contact-us.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { AppMaterialModule } from './app-material.module';
     AppBlogCreateComponent,
     AppBlogViewComponent,
     AppBlogEditComponent,
-    AppNotFoundComponent
+    AppNotFoundComponent,
+    AppConnectWithUsComponent,
+    AppContactUsComponent
   ],
   imports: [
     BrowserModule,
