@@ -23,25 +23,11 @@ export class MenuLinkService {
       url: '/about',
     },
     {
-      name: 'View Blogs',
-      pageName: 'View Blog | Blog App',
-      hasIcon: true,
-      icon: 'pageview',
-      url: '/blog/:blogId',
-    },
-    {
       name: 'Post a blog',
       pageName: 'Create Blog | Blog App',
       hasIcon: true,
       icon: 'create',
       url: '/create',
-    },
-    {
-      name: 'Edit blog',
-      pageName: 'Edit Blog | Blog App',
-      hasIcon: true,
-      icon: 'mode_edit',
-      url: '/edit/:blogId',
     },
     {
       name: 'Connect with Us',
