@@ -1,0 +1,21 @@
+@function px-rem($unit) {
+  $temp: $unit/16;
+  @return $temp * 1rem;
+}
+
+@function complement-color-palette($base-color-palette) {
+  $result: ();
+
+  @each $key,
+  $value in $base-color-palette {
+    @if $key==contrast {
+      $result: map-merge($result, ($key: $value));
+    }
+
+    @else {
+      $result: map-merge($result, ($key: complement($value)));
+    }
+  }
+
+  @return $result;
+}

@@ -1,0 +1,9 @@
+<div class="d-flex d-flex--col">
+  <ul class="sidenav-menu sidenav-menu--list d-flex d-flex--col">
+    <li class="sidenav-menu--list-item" *ngFor="let menuItem of navigationConfig">
+      <a [routerLink]="menuItem.url" class="sidenav-menu--list-link" routerLinkActive="sidenav-menu--list-link-active">
+        <mat-icon *ngIf="menuItem.hasIcon" class="mr-10">{{menuItem.icon}}</mat-icon>
+        {{ menuItem.name }}</a>
+    </li>
+  </ul>
+</div>

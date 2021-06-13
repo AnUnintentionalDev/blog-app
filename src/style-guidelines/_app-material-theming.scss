@@ -1,0 +1,91 @@
+@import '~@angular/material/theming';
+@import '../app-scss-lib/index';
+
+body,
+html {
+  height: 100%;
+}
+
+$fontFamily: 'Montserrat',
+sans-serif;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $fontFamily;
+  background-color: $app-body-background-color;
+  @include font-size(14);
+  color: rgba(#000000, $alpha: 0.9);
+
+  * {
+    font-family: $fontFamily;
+    box-sizing: border-box;
+  }
+
+  a {
+    color: #0667D6;
+    text-decoration: none;
+
+    :hover {
+      color: #0870e6;
+      text-decoration: underline;
+    }
+  }
+
+}
+
+$iz-typography : mat-typography-config($font-family: $fontFamily,
+  $headline: mat-typography-level(3rem, 1.367em, 400),
+  $title: mat-typography-level(0.875rem, 1.513em, 400),
+  $subheading-2: mat-typography-level(2rem, 1.4em, 400),
+  $subheading-1: mat-typography-level(1.125rem, 1.428em, 500),
+  $body-2: mat-typography-level(0.875rem, 1.513em, 500),
+  $body-1: mat-typography-level(0.875rem, 1.513em, 400),
+  $caption: mat-typography-level(0.75rem, 1.567em, 500),
+  $button: mat-typography-level(0.875rem, 1.513em, 400));
+
+//should be included once in project
+@include mat-core($iz-typography);
+
+$iz-primary-color-palette: (50: #e8f5e9,
+  100: #c8e6c9,
+  200: #a5d6a7,
+  300: #81c784,
+  400: #66bb6a,
+  500: #4caf50,
+  600: #43a047,
+  700: #388e3c,
+  800: #2e7d32,
+  900: #1b5e20,
+  A100: #b9f6ca,
+  A200: #69f0ae,
+  A400: #00e676,
+  A700: #00c853,
+  contrast: (50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  ));
+
+$iz-secondary-color-palette : complement-color-palette($iz-primary-color-palette);
+
+$iz-material-guideline-primary: mat-palette($iz-primary-color-palette);
+$iz-material-guideline-accent: mat-palette($iz-secondary-color-palette);
+
+$iz-material-guideline-warn: mat-palette($mat-red);
+
+$iz-material-guideline-theme: mat-light-theme((color: (primary: $iz-material-guideline-primary,
+      accent: $iz-material-guideline-accent,
+      warn: $iz-material-guideline-warn)));
+
+@include angular-material-theme($iz-material-guideline-theme);

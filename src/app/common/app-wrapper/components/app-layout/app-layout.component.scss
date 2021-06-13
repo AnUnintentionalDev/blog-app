@@ -1,0 +1,23 @@
+@import '../../../../../app-scss-lib/index';
+
+.mat-drawer-inner-container {
+  &--main-menu {
+    min-width: 260px;
+
+    .sidenav-menu {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.app-header {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+}
+
+.app-body-wrapper {
+  margin-top: px-rem(64);
+}

@@ -2,29 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent } from './root/components/app-root/app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppHomeComponent } from './app-home/app-home.component';
-import { AppAboutComponent } from './app-about/app-about.component';
-import { AppBlogCreateComponent } from './app-blog-create/app-blog-create.component';
-import { AppBlogViewComponent } from './app-blog-view/app-blog-view.component';
-import { AppBlogEditComponent } from './app-blog-edit/app-blog-edit.component';
-import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
 import { AppMaterialModule } from './app-material.module';
-import { AppConnectWithUsComponent } from './app-connect-with-us/app-connect-with-us.component';
-import { AppContactUsComponent } from './app-contact-us/app-contact-us.component';
+import { LazyLoaderIndicatorComponent } from './root/components/lazy-loader-indicator/lazy-loader-indicator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppHomeComponent,
-    AppAboutComponent,
-    AppBlogCreateComponent,
-    AppBlogViewComponent,
-    AppBlogEditComponent,
-    AppNotFoundComponent,
-    AppConnectWithUsComponent,
-    AppContactUsComponent
+    LazyLoaderIndicatorComponent
   ],
   imports: [
     BrowserModule,
