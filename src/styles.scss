@@ -1,14 +1,5 @@
 @import './app-scss-lib/index';
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
+@import './style-guidelines/app-material-theming';
 
 .mat-drawer-container {
   width: 100%;
@@ -37,9 +28,23 @@ body {
       justify-content: space-between;
     }
 
+    &-justify-center {
+      justify-content: center;
+    }
+
     &-space-around {
       justify-content: space-around;
     }
+  }
+}
+
+.display {
+  &-block {
+    display: block;
+  }
+
+  &-inline-block {
+    display: inline-block;
   }
 }
 
@@ -57,6 +62,11 @@ body {
   }
 }
 
+.app-container {
+  width: px-rem(1040);
+  margin: 0 auto;
+}
+
 $margin-padding-last-value-in-px: 120;
 $margin-padding-gap-value-in-px: 5;
 
@@ -64,4 +74,17 @@ $margin-padding-gap-value-in-px: 5;
   $val: $margin-padding-last-value-in-px;
   @include generate-margin-padding($val);
   $margin-padding-last-value-in-px: $margin-padding-last-value-in-px - $margin-padding-gap-value-in-px;
+}
+
+$full-height-last-value-in-vh: 100;
+$full-height-gap-value-in-vh: 5;
+
+@while ($full-height-last-value-in-vh >=50) {
+  $val: $full-height-last-value-in-vh;
+  @include create-full-height($val);
+  $full-height-last-value-in-vh: $full-height-last-value-in-vh - $full-height-gap-value-in-vh;
+}
+
+img {
+  max-width: 100%;
 }

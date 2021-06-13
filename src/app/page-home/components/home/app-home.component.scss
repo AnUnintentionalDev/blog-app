@@ -1,0 +1,53 @@
+@import '../../../../app-scss-lib/index';
+
+.app-home {
+  position: relative;
+  min-height: calc(100vh - #{px-rem(64)});
+
+  &--featured-wrapper {
+    padding: px-rem(20) px-rem(30);
+  }
+
+  &--content-wrapper {
+    width: 50%;
+    padding-right: px-rem(14);
+  }
+
+  &--banner-wrapper {
+    width: 45%;
+  }
+}
+
+#know-more-section {
+  width: 100%;
+  padding: px-rem(20) px-rem(30);
+  position: relative;
+  background: $white-color;
+}
+
+.know-more-section {
+  &-content-wrapper {
+    width: 50%;
+    padding-right: px-rem(10);
+  }
+
+  &-illustration {
+    width: 45%;
+  }
+}
+
+.post-a-blog {
+  &--main-wrapper {
+    max-width: 360px;
+
+    h3 {
+      font-weight: bold;
+    }
+  }
+
+
+  &--featured-img {
+    max-width: px-rem(200);
+  }
+
+}

@@ -1,3 +1,21 @@
+@mixin height($unit) {
+  @if $unit {
+    height: px-rem($unit);
+  }
+}
+
+@mixin width($unit) {
+  @if $unit {
+    width: px-rem($unit);
+  }
+}
+
+@mixin font-size($unit) {
+  @if $unit {
+    font-size: px-rem($unit);
+  }
+}
+
 @mixin generate-margin-padding($val) {
   .m-#{$val} {
     margin: $val+px !important;
@@ -37,5 +55,17 @@
 
   .pr-#{$val} {
     padding-right: $val+'px' !important;
+  }
+}
+
+@mixin include-mat-icon-styles($unit) {
+  height: px-rem($unit);
+  width: px-rem($unit);
+  font-size: px-rem($unit);
+}
+
+@mixin create-full-height($val) {
+  .height-#{$val}vh {
+    min-height: calc(#{$val+'vh'} - #{px-rem(64)});
   }
 }
