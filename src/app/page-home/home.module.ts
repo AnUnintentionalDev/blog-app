@@ -5,6 +5,7 @@ import { HomeRoutingModule } from "./home-routing.module";
 import { AppHomeComponent } from "./components/home/app-home.component";
 import { AppWrapperModule } from "../common/app-wrapper/app-wrapper.module";
 import { AppMaterialModule } from "../app-material.module";
+import { BlogPostTagPipeModule } from "../common/blog-post-tags-pipe/blog-post-tags-pipe.module";
 
 @NgModule({
   declarations: [AppHomeComponent],
@@ -12,7 +13,8 @@ import { AppMaterialModule } from "../app-material.module";
     CommonModule,
     HomeRoutingModule,
     AppWrapperModule,
-    AppMaterialModule
+    AppMaterialModule,
+    BlogPostTagPipeModule
   ],
   exports: [],
   providers: []

@@ -19,7 +19,7 @@ body {
 
   * {
     font-family: $fontFamily;
-    box-sizing: border-box;
+    box-sizing: content-box;
   }
 
   a {
