@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogPostModel } from 'src/app/common/models/blog-post.model';
+import { AllBlogsService } from 'src/app/root/services/fetch-all-blogs/all-blogs.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppHomeComponent implements OnInit {
 
-  constructor() { }
+  allBlogPostsData: Array<BlogPostModel>;
+
+  constructor(
+    private allBlogsService: AllBlogsService
+  ) { }
 
   ngOnInit(): void {
+    this.allBlogsService.fetchAllBlogPostsData();
+    this.allBlogsService.blogPostsData$.subscribe((res: Array<BlogPostModel>) => {
+      this.allBlogPostsData = res;
+    });
   }
 
   onClickKnowMore() {
